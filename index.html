@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento Médico - Cidade Pequenas Paraná</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="icon.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-hospital-alt"></i> UBS DE RIO BRANCO DO IVAÍ Pr</h1>
+            <p>Sistema de agendamento para cidades pequenas</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="problem-description">
+            <h2>Problema: Acesso Limitado a Serviços Médicos</h2>
+            <p>Em nossa cidade pequena, os moradores enfrentam dificuldades para marcar consultas médicas devido à:</p>
+            <ul>
+                <li>Fila única para todas as especialidades</li>
+                <li>Falta de informação sobre horários disponíveis</li>
+                <li>Dificuldade em lembrar dos agendamentos</li>
+            </ul>
+        </section>
+
+        <section class="solution-section">
+            <h2>Nossa Solução</h2>
+            <div class="solution-cards">
+                <div class="card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Agendamento Online</h3>
+                    <p>Marque sua consulta a qualquer momento, sem sair de casa</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-bell"></i>
+                    <h3>Lembretes Automáticos</h3>
+                    <p>Receba alertas por SMS e e-mail sobre sua consulta</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Perfis de Médicos</h3>
+                    <p>Conheça os profissionais disponíveis em nossa cidade</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="appointment-form">
+            <h2><i class="fas fa-edit"></i> Agende sua Consulta</h2>
+            <form id="appointmentForm">
+                <div class="form-group">
+                    <label for="name">Nome Completo:</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" placeholder="000.000.000-00" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="specialty">Especialidade:</label>
+                    <select id="specialty" required>
+                        <option value="">Selecione...</option>
+                        <option value="clínico">Clínico Geral</option>
+                        <option value="pediatra">Pediatria</option>
+                        <option value="ginecologista">Ginecologia</option>
+                        <option value="cardiologista">Cardiologia</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Data:</label>
+                    <input type="date" id="date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="time">Horário:</label>
+                    <input type="time" id="time" required>
+                </div>
+                
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-calendar-plus"></i> Agendar Consulta
+                </button>
+            </form>
+        </section>
+
+        <section class="command-prompt">
+            <h2><i class="fas fa-terminal"></i> Prompt de Comandos para Administração</h2>
+            <div class="prompt-container">
+                <div class="prompt-header">
+                    <span class="prompt-icon">$</span>
+                    <span class="prompt-text">Terminal do Sistema de Saúde</span>
+                </div>
+                <div class="prompt-body" id="promptOutput">
+                    <p>Bem-vindo ao sistema de agendamento médico.</p>
+                    <p>Digite 'help' para ver os comandos disponíveis.</p>
+                </div>
+                <div class="prompt-input">
+                    <span class="prompt-icon">></span>
+                    <input type="text" id="commandInput" placeholder="Digite um comando...">
+                </div>
+            </div>
+        </section>
+    </main>
+
+<section class="scheduled-appointments">
+    <h2><i class="fas fa-list-alt"></i> Consultas Agendadas</h2>
+    <div class="appointments-list" id="appointmentsList">
+        <p class="empty-message">Nenhuma consulta agendada ainda.</p>
+    </div>
+</section>
+    <footer>
+        <div class="container">
+            <p>Sistema desenvolvido para melhorar o atendimento de Rio Branco do Ivaí Pr</p>
+            <p>© 2025 Todos os direitos reservados a turma do 1º Ano B</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
